@@ -103,6 +103,35 @@ void yyerror(const char *s)
 # OUTPUT
 
 VALID
-
+```
+Volume Serial Number is 8A5B-6C40
+Directory of C:\Dev-Cpp\TDM-GCC-64\bin\exp3
+16-03-2026 10:39
+<DIR>
+16-03-2026 10:20
+<DIR>
+16-03-2026 10:38
+428 exp3cd.l
+16-03-2026 10:38
+709 exp3cd.y
+2 File(s)
+1,137 bytes
+2 Dir(s) 114,184,134,656 bytes free
+C:\Dev-Cpp\TDM-GCC-64\bin\exp3>flex exp3cd.1
+C:\Dev-Cpp\TDM-GCC-64\bin\exp3>bison -d exp3cd.y
+C:\Dev-Cpp\TDM-GCC-64\bin\exp3>gcc lex.yy.c exp3cd.tab.c -o a.exe
+C:\Dev-Cpp\TDM-GCC-64\bin\exp3>a.exe
+Enter Expression:
+8+9
+Valid Arithmetic Expression
+```
+INVALID
+```
+C:\Dev-Cpp\TDM-GCC-64\bin\exp3>a.exe
+Enter Expression:
+7*
+Invalid Arithmetic Expression
+C:\Dev-Cpp\TDM-GCC-64\bin\exp3>
+```
 # RESULT
 A YACC program to recognize a valid arithmetic expression that uses operator +,-,* and / is executed successfully and the output is verified.
